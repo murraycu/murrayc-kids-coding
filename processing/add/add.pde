@@ -4,6 +4,7 @@ String b = "12345999";
 
 int n = a.length();
 for (int i = n - 1; i >= 0; i = i - 1) {
-  println(a.charAt(i));
+  int d1 = a.charAt(i);
+  println(d1);
 }
   
