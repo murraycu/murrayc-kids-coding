@@ -9,7 +9,8 @@ for (int i = n - 1; i >= 0; i = i - 1) {
   int d2 = b.charAt(i) - '0';
 
   int add = d1 + d2;
-  answer = add + answer;
+  int remainder = add % 10;
+  answer = remainder + answer;
 }
 
 println(answer);
