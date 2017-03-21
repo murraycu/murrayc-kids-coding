@@ -1,17 +1,27 @@
 //          01234567
-String a = "56789869";
-String b = "92345999";
+String a =  "100";
+String b = "1000";
 String answer = new String();
 
 println("  " + a);
 println("+ " + b);
 println("  ---------");
 
-int n = a.length();
+int lena = a.length();
+int lenb = b.length();
+int n = Math.max(lena, lenb);
+
 int carry = 0;
-for (int i = n - 1; i >= 0; i = i - 1) {
-  int d1 = a.charAt(i) - '0';
-  int d2 = b.charAt(i) - '0';
+for (int i = 1; i <= n; i += 1) {
+  int d1 = 0;
+  if (i <= lena) {
+    d1 = a.charAt(lena - i) - '0';
+  }
+
+  int d2 = 0;
+  if (i <= lenb) {
+    d2 = b.charAt(lenb - i) - '0';
+  }
 
   int add = d1 + d2 + carry;
   int remainder = add % 10;
