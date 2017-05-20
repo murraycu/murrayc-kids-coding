@@ -1,12 +1,5 @@
-void setup() {
-  //          01234567
-  String a =  "100";
-  String b = "1000";
+String add_numbers(String a, String b) {
   String answer = new String();
-
-  println("  " + a);
-  println("+ " + b);
-  println("  ---------");
 
   int lena = a.length();
   int lenb = b.length();
@@ -35,5 +28,16 @@ void setup() {
     answer = carry + answer;
   }
 
+  return answer;
+}
+
+void setup() {
+  String a =  "100";
+  String b = "1000";
+  String answer = add_numbers(a, b);
+
+  println("  " + a);
+  println("+ " + b);
+  println("  ---------");
   println("= " + answer);
 }
