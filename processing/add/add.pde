@@ -31,13 +31,16 @@ String add_numbers(String a, String b) {
   return answer;
 }
 
-void setup() {
-  String a =  "100";
-  String b = "1000";
+void add_and_print(String a, String b) {
   String answer = add_numbers(a, b);
 
   println("  " + a);
   println("+ " + b);
   println("  ---------");
   println("= " + answer);
+}
+
+void setup() {
+  add_and_print("1234", "5678");
+  add_and_print("9876", "5432");
 }
