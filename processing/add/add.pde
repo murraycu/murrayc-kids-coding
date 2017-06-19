@@ -31,7 +31,9 @@ String add_numbers(String a, String b) {
   return answer;
 }
 
-void add_and_print(String a, String b) {
+void add_and_print(String[] nums) {
+  String a = nums[0];
+  String b = nums[1];
   String answer = add_numbers(a, b);
 
   println("  " + a);
@@ -41,6 +43,6 @@ void add_and_print(String a, String b) {
 }
 
 void setup() {
-  add_and_print("1234", "5678");
-  add_and_print("9876", "5432");
+  String[] nums = {"1234", "5678"};
+  add_and_print(nums);
 }
